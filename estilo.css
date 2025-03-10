@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+}
+
+/* nav */
+nav a{
+    color:inherit;
+    text-decoration: none;
+    position:sticky;
+}
+
+nav img{
+    width:50px;
+    
+}
+
+nav a:hover{
+    color:rgb(51, 204, 255);
+}
+
+/* */
