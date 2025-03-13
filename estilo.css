@@ -1,21 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:wght@900&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    font-family: 'kanit'
+}
+
 body{
     margin:0;
+    background-color: rgba(51, 204, 255, 0.152);
+}
+
+.navegacion{
+    position: fixed;
+    
 }
 
 /* nav */
+
+#nombre{
+    margin-top:20px;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+#logoYNombre{
+    display: flex;
+    flex-direction: column;
+}
+
+.mainav{
+    top:0;
+    left:0;
+    width:200px;
+    height: 175px;
+    padding:20px;
+    margin-top:50px;
+    font-size: 13px;
+}
+
 nav a{
     color:inherit;
     text-decoration: none;
     position:sticky;
 }
 
-nav img{
-    width:50px;
-    
+.mainav{
+    display: flex;
+    padding:20x;
+    width: 120px;
+    height: 475px;
+    color:white;
+    background-color: white;
+    border-radius: 35px;
+}
+
+.mainav:hover{
+    color:black;
+    transition: color 0.5s ease;
 }
 
 nav a:hover{
@@ -28,115 +73,629 @@ nav ul, nav ol{
     list-style:none;
 }
 
-#mainav, #breadcrumb, .sidebar nav{
+.mainav{
     line-height:normal;
 }
 
-#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{
+.mainav .drop::after, #mainav li li .drop::after{
     position:absolute;
-    font-family:"Font Awesome\ 5 Free";
     font-weight:900;
     font-size:10px;
     line-height:10px;
 }
 
-#mainav{}
+.mainav{
+    display: block;
+    position: sticky;
+    margin-right: 20px;
 
-#mainav ul{
-    text-transform:uppercase;
 }
 
-#mainav ul ul{
+.mainav img{
+    width:200px;
+}
+
+
+.mainav ul ul{
     position:absolute;
-    width:180px;
+    width:120px;
     text-transform:none;
     z-index:9999;
+    margin-left:-20px;
 }
 
-#mainav ul ul ul{
+.mainav ul ul ul{
     left:180px;
     top:0;
 }
 
-#mainav li{
+.mainav li{
     display:inline-block;
     position:relative;
     margin:0 15px 0 0;
     padding:0;
 }
 
-#mainav li:last-child{
+.mainav li:last-child{
     margin-right:0;
 }
-#mainav li li{
+.mainav li li{
     width:100%;
     margin:0;
 }
-#mainav li a{
+.mainav li a{
     display:block;
     padding:30px 0;
 }
 
-#mainav li li a{
-    border:solid;
-    border-width:0 0 1px 0;
+.mainav li li a{
+    border: solid 1px rgb(97, 97, 97);
+    border-width: 0 0 0 0.5;
+    background-color: white;
+    
 }
 
-#mainav .drop{
+.mainav li li a:hover {
+    background-color: rgb(51, 204, 255);
+    color:black;
+}
+
+.mainav .drop{
     padding-left:15px;
 }
 
-#mainav li li a, #mainav li li .drop{
+.mainav li li a, #mainav li li .drop{
     display:block;
     margin:0;
     padding:10px 15px;
 }
 
-#mainav .drop::after, #mainav li li .drop::after{
-    content:"\f0d7";
+.mainav .drop::after, #mainav li li .drop::after{
+    content:"▼";
 }
-#mainav .drop::after{
+
+.mainav .drop::after{
     top:35px;
     left:5px;
 }
-#mainav li li .drop::after{
+.mainav li li .drop::after{
     top:15px;
     left:5px;
 }
 
-#mainav ul ul{
+.mainav ul ul{
     visibility:hidden;
     opacity:0;
 }
 
-#mainav ul li:hover > ul{
+.mainav ul li:hover > ul{
     visibility:visible;
     opacity:1;
 }
 
-#mainav form{
+.mainav form{
     display:none;
     margin:0;
     padding:0;
 }
 
-#mainav form select, #mainav form select option{
+.mainav form select, #mainav form select option{
     display:block;
     cursor:pointer;
     outline:none;
 }
 
-#mainav form select{
+.mainav form select{
     width:100%;
     padding:5px;
     border:none;
 }
 
-#mainav form select option{
+.mainav form select option{
     margin:5px;
     padding:0;
     border:none;
 }
 
+/* Slogan */
 
-/* */
+.slogan{
+    font-style: italic;
+    text-align: center;
+    color: rgb(51, 204, 255);
+    margin-bottom: 100px;
+    background-color:rgba(0, 187, 255, 0.205);
+    padding:10px;
+    width:600px;
+    margin-left: 26vw;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.slogan:hover{
+    color:white;
+    background-color: rgb(51, 204, 255);
+}
+/* Presentacion */
+
+.presentacion{
+    margin-bottom: 100px;
+    
+}
+    
+.presentacion h1{
+    text-align: center;
+}
+
+.presentacion p{
+    float: left;
+    width:500px;
+    margin-left: 200px;
+    margin-top:100px;
+    font-size: 15px;
+    padding:20px;
+    border-width: 1px;
+    border-radius: 30px;
+    background-color:rgba(0, 166, 255, 0.289);
+    color: rgb(0, 0, 0);
+
+}
+
+.presentacion img{
+    float: right;
+    width:250px;
+    margin-right: 200px;
+    border-radius: 50px;
+    margin-top:150px;
+}
+/* Carousel */
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin-left: 200px;
+    margin-top: 100px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.carousel-track img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Descargar */
+
+.textoDescarga{
+    text-align: center;
+}
+
+.descargas img {
+    width: 50px;
+    margin-bottom: 10px; /* Add margin to create separation */
+}
+
+.descargas {
+    display: flex;
+    justify-content: center;
+    gap: 200px; /* Adjust the gap value as needed */
+    margin-top:100px;
+    margin-left: 30px;
+    margin-bottom: 100px;
+}
+
+.descargas div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Google Play */
+.googlePlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Adjust the gap value as needed */
+}
+
+.imagenGooglePlay{
+    background-color: rgba(0, 166, 255, 0.289);
+    padding:20px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.imagenGooglePlay:hover{
+    background-color: rgb(51, 204, 255);
+    transition: background-color 1s ease;
+}
+
+.imagenApple{
+    background-color: rgba(0, 166, 255, 0.289);;
+    padding:20px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.imagenApple:hover{
+    background-color: rgb(51, 204, 255);
+    transition: background-color 1s ease;
+}
+
+
+.imagenDescarga{
+    background-color: rgba(0, 166, 255, 0.289);
+    padding:20px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.imagenDescarga:hover{
+    background-color: rgb(51, 204, 255);
+    transition: background-color 1s ease;
+}
+
+
+
+/* Apple */
+.apple {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+
+}
+
+
+/* Descarga directa */
+.descargaDirecta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* footer */
+
+.footer{
+    display: flex;
+    padding:100px;
+    bottom:0;
+    background-color: rgba(0, 166, 255, 0.289);
+    text-align: center;
+    justify-content: center;
+    margin-inline: 20px;
+    gap:200px;
+}
+
+.footer a{
+    text-decoration: none;
+    color: black;
+}
+
+.linkPagina{
+    display: flex;
+    align-items: center;
+    gap:20px;
+    padding:10px;
+}
+
+.linkPagina a:hover{
+    color:white;
+}
+
+.linkPagina:hover{
+    background-color: rgb(51, 204, 255);
+    padding:10px;
+    border-radius:20px;
+    transition: background-color 1s ease, padding 1s ease, border-radius 1s ease;
+}
+
+.linkPagina img{
+    width:50px;
+}
+
+.redesSociales{
+    display: flex;
+    gap:60px;
+}
+
+#facebook:hover, #twitter:hover, #instagram:hover{
+    background-color: rgb(51, 204, 255);
+    padding:10px;
+    border-radius: 20px;
+    transition: background-color 1s ease, padding 1s ease, border-radius 1s ease;
+    justify-content: center;
+}
+
+#facebook, #twitter, #instagram{
+    padding:10px;
+}
+
+.redesSociales img{
+    width:50px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+    /*Página: Documentación*/
+
+.funcionesWaze img{
+    width:100px;
+}
+
+.footer{
+    width:100%;
+    margin-left:0px;
+}
+
+.video{
+    text-align: center;
+    margin-bottom: 100px;
+    background-color: rgb(48, 204, 254);
+    padding-top:10px;
+    padding-bottom: 20px;
+    width:800px;
+    height:450px;
+    margin-left: 225px;
+    border-radius: 30px;
+}
+
+#documentacion{
+    font-style: italic;
+    text-align: center;
+    color: rgb(51, 204, 255);
+    margin-bottom: 100px;
+    background-color:rgba(0, 187, 255, 0.205);
+    padding:10px;
+    width:600px;
+    margin-left: 26vw;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+#documentacion:hover{
+    color:white;
+    background-color: rgb(51, 204, 255);
+}
+
+#funcionesTexto{
+    font-style: italic;
+    text-align: center;
+    color: rgb(51, 204, 255);
+    margin-bottom: 100px;
+    background-color:rgba(0, 187, 255, 0.205);
+    padding:10px;
+    width:600px;
+    margin-left: 26vw;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+#funcionesTexto:hover{
+    color:white;
+    background-color: rgb(51, 204, 255);
+    
+}
+
+#funcionesPrincipales{
+    text-align: center;
+}
+
+.funcionesFondo{
+    background-color: rgb(194, 246, 255);
+    padding-bottom: 1600px;
+    padding-top:100px;
+}
+.funcionesWaze{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    gap:20px;
+    float:right;
+    margin-right: 40px;
+}
+
+.funcionesWaze img{
+    border-radius: 50px;
+    margin-bottom: 100px;
+}
+.textoFunciones{
+    float:left;
+    width:500px;
+    margin-left:200px;
+    margin-bottom: 100px;
+    margin-top:100px;
+}
+
+#textoFunciones:hover, #textoFunciones1:hover, #textoFunciones2:hover, #textoFunciones3:hover{
+    color:white;
+    background-color: rgb(51, 204, 255);
+}
+
+#textoFunciones{
+    margin-bottom: 200px;
+    background-color: rgb(58, 184, 222);
+    padding:20px;
+    border-radius: 30px;
+    margin-top:-20px;
+}
+
+#textoFunciones1{
+    margin-bottom: 200px;
+    background-color: rgb(58, 184, 222);
+    padding:20px;
+    border-radius: 30px;
+}
+
+#textoFunciones2{
+    margin-bottom: 200px;
+    background-color: rgb(58, 184, 222);
+    padding:20px;
+    border-radius: 30px;
+}
+
+#textoFunciones3{
+    margin-bottom: 150px;
+    background-color: rgb(58, 184, 222);
+    padding:20px;
+    border-radius: 30px;
+}
+
+
+#mapa{
+    font-style: italic;
+    color: rgb(51, 204, 255);
+    background-color:rgba(0, 187, 255, 0.205);
+    border-radius: 30px;
+    width:500px;
+    margin-left:400px;
+    text-align: center;
+}
+
+#mapa:hover{
+    color:white;
+    background-color: rgb(51, 204, 255);
+    
+}
+
+.mapa{
+    margin-top:122px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+iframe{
+    border-radius: 40px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+    /*Página: Registro*/
+
+#tituloRegistro{
+    font-style: italic;
+    color: rgb(51, 204, 255);
+    background-color:rgba(0, 187, 255, 0.205);
+    border-radius: 30px;
+    width:500px;
+    margin-left:400px;
+    text-align: center;
+}
+
+#tituloRegistro:hover{
+    color:white;
+    background-color: rgb(51, 204, 255);
+    
+}
+
+
+.registro {
+    width: 550px;
+    margin-left: 375px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 50px;
+    background-color: rgba(0, 187, 255, 0.205);
+    padding: 30px;
+    border-radius: 30px;
+}
+
+/* Estilo para los labels de los campos superiores */
+.registro label:not([for="condiciones"]) { /* :not() excluye  */
+    display: inline-block;
+    width: 150px; /* Ancho de los labels */
+    text-align: center; /* Alinea el texto*/
+    margin-right: 20px;
+}
+
+/* Estilo para los inputs y selects */
+.registro input:not([type="checkbox"]), .registro select {
+    width: 300px; /* Ancho fijo para los inputs */
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid gray;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: left;
+}
+
+/* Estilo para el contenedor de cada campo */
+.registro div {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo específico para el checkbox y su label */
+.registro input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    margin-left:145px;
+}
+
+.registro label[for="condiciones"] {
+    display: inline-block;
+    text-align: left;
+    margin-left: 10px;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+/* Estilo para el botón de envío */
+.registro input[type="submit"] {
+    width: 100px;
+    margin-left: 195px;
+    text-align: center;
+    background-color: rgb(51, 204, 255);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.registro input[type="submit"]:hover {
+    background-color: rgb(0, 166, 255);
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+    /*Página: Aviso legal*/
+
+.avisoLegal{
+    font-style: italic;
+    color: rgb(51, 204, 255);
+    background-color: rgba(0, 187, 255, 0.205);
+    border-radius: 30px;
+    width: 800px;
+    margin-left: 233px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.avisoLegal:hover {
+    color: white;
+    background-color: rgb(51, 204, 255);
+}
+
+.textoAvisoLegal{
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    background-color:rgba(0, 166, 255, 0.289);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    margin-left: 233px;
+    width: 800px;
+    text-align: justify;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+

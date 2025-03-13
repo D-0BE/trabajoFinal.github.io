@@ -8,21 +8,138 @@
 </head>
 
 <header>
-    <nav id = "mainav">
-        <ul class="clear">
-            <li class="active"><a href="#">Portada</a></li>
-            <li><a class="drop" href="#">Páginas</a>
-            <ul>
-                <li><a href="#">App</a></li>
-                <li><a href="#">Mapas</a></li>
+    <nav class = "navegacion">
+    
+        <div class = "mainav">
+            <div id = "logoYNombre">
+                
+                <img src="/fotos/logoWaze.png" alt="logoWaze" style="width: 53px; height: 50px; border-radius: 100px; margin-top:15px; margin-left:15px;">
+                <p id = "nombre">Waze</p>
+            </div>
+            <ul class="clear">
+                <li id = "portada"><a href="index.html">Portada</a></li>
+                <li><a class="drop" href="#">Más</a>
+                <ul>
+                    <li><a href="documentacion.html">Documentación</a></li>
+                    <li><a href="registro.html">Registro</a></li>
+                </ul>
+                </li>
+                <li id = "avisoLegal"><a href="avisoLegal.html">Aviso legal</a></li>
+                
             </ul>
-            </li>
-            <li class="active"><a href="#">Inicar sesión</a></li>
-            <li class="active"><a href="#contacto">Contacto</a></li>
-        </ul>
+        </div>
     </nav>
 </header>
 <body>
+    <div class = "slogan">
+        <h1>Waze te enseñará los caminos</h1>
+    </div>
+    <div class = "presentacion">
+        <div>
+            <h1>Nuestra app:</h1>
+        </div>
+
+        <div><img src="/fotos/movilWaze.pjpeg" alt="fotoMovilWaze"></div>
+        <div>
+            <p>Waze es una aplicación de navegación GPS gratuita que ayuda a los conductores a encontrar las rutas más rápidas en tiempo real. A diferencia de otros mapas, Waze se basa en la colaboración de los usuarios, quienes comparten información sobre el tráfico, accidentes, obras, radares y otros obstáculos en la vía.
+            <br><br>
+            Gracias a estas aportaciones, Waze puede ajustar las rutas de manera inteligente para ahorrar tiempo, evitar atascos y mejorar la experiencia al volante.
+            <br><br>
+            Además, muestra alertas visuales y de voz, calcula tiempos estimados de llegada y permite planificar viajes con anticipación.</p>
+        </div>
+    </div>
+
+    <div class="carousel">
+        <div class="carousel-track" id="carouselTrack">
+            <img src="/fotos/mapaWaze2.jpg" alt="mapaWaze">
+            <img src="/fotos/movilWaze.jpg" alt="movilWaze">
+            <img src="/fotos/cocheMapa.jpg" alt="cocheMapa">
+            <img src="/fotos/retencionWaze.jpg" alt="retencionWaze">
+            <img src="/fotos/mapaWaze2.jpg" alt="Imagen 1 (clon)">
+        </div>
+    </div>
+
+    <script>
+        const track = document.getElementById('carouselTrack');
+        const slides = track.children;
+        const totalSlides = slides.length;
+        let currentIndex = 0;
+    
+        function nextSlide() {
+            currentIndex++;
+            track.style.transition = "transform 1s ease-in-out";
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    
+            if (currentIndex === totalSlides - 1) {
+                setTimeout(() => {
+                    track.style.transition = "none";
+                    track.style.transform = `translateX(0%)`;
+                    currentIndex = 0;
+                }, 1000);
+            }
+        }
+    
+        setInterval(nextSlide, 4000);
+    </script>
+
+
+    
+        <div class = "textoDescarga">
+            <h1>Descargas</h1>
+        </div>
+        
+        <div class = "descargas">
+
+            <div class = "googlePlay">
+
+                <div class = "imagenGooglePlay">
+                    <a href = "https://play.google.com/store/apps/details?id=com.waze&referrer=deeplink_f%3D%26utm_source%3Dwaze_website%26utm_medium%3Dweb-livemap-desktop-cta_bar%26utm_campaign%3Ddefault%26ll%3D43.24268847%252C-3.76831055%26navigate%3Dyes"><img src="/fotos/googlePlayLogo.png" alt="googlePlay"></a>
+                </div>
+    
+                <div class = "textoGooglePlay">
+                    <p>Google Play</p>
+                </div>
+            </div>
+    
+    
+            <div class = "apple">
+                <div class = "imagenApple">
+                    <a href = "https://apps.apple.com/us/app/waze-navigation-live-traffic/id323229106?pt=274039"><img src="/fotos/appleLogo.png" alt="apple"></a>
+                </div>
+    
+                <div class = "textoApple">
+                    <p id = "apple">Apple</p>
+                </div>
+            </div>
+    
+    
+            <div class = "descargaDirecta">
+                <div class = "imagenDescarga">
+                    <a href = "https://waze.softonic.com/android/descargar?utm_source=SEM&utm_medium=paid&utm_campaign=ES_DSA&gad_source=1&gclid=Cj0KCQjw4cS-BhDGARIsABg4_J2FzGI6ZU1ozBZBv-ZMoXXFhwnIfygSnLwO6gOX6Dd2cPqxtrUIYy4aApqEEALw_wcB"><img src="/fotos/descargaDirecta.png" alt="descargar"></a>
+                </div>
+    
+                <div class = "textoDescarga">
+                    <p>Descarga directa</p>
+                </div>
+            </div>
+
+        </div>
+
+        
     
 </body>
+
+<footer>
+    <div class="footer">
+        <div class="linkPagina">
+            <a href = "https://www.waze.com">Página oficial:</a>
+            <a href="https://www.waze.com"><img src="/fotos/logoWaze1.webp" alt = "logoWaze"></a>
+        </div>
+        <div class="redesSociales">
+            <a id = "facebook" href="https://www.facebook.com/waze"><img src="/fotos/logoFacebook.webp" alt="Facebook"></a>
+            <a id = "twitter" href="https://twitter.com/waze"><img src="/fotos/logoTwitter.png" alt="Twitter"></a>
+            <a id = "instagram" href="https://www.instagram.com/waze"><img src="/fotos/logoInstagram.png" alt="Instagram"></a>
+        </div>
+    </div>
+</footer>
 </html>
